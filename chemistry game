@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تحدي الصيغ الكيميائية</title>
+<style>body{font-family:sans-serif;background:#0a0f2c;color:#fff;text-align:center;padding:20px}input,button{font-size:18px;margin:8px;padding:10px}button{background:#f60;color:#fff;border:0;border-radius:6px;cursor:pointer}#game{display:none}#end{display:none}.stats{margin-top:15px;background:rgba(0,0,0,0.5);padding:10px;border-radius:6px}</style>
+</head>
+<body>
+<div id="start">
+<h2>🧪 تحدّي الصيغ الكيميائية</h2>
+<p>أدخلي اسمك الثنائي:</p>
+<input id="name" placeholder="مثل: ليان خالد" maxlength="30">
+<br>
+<button onclick="start()">ابدأ التحدي!</button>
+<button onclick="showStats()">📊 الإحصائيات</button>
+<div id="statsList" class="stats"></div>
+</div>
+
+<div id="game">
+<h3 id="q"></h3>
+<input id="ans" placeholder="اكتب الصيغة">
+<br>
+<button onclick="check()">تحقق</button>
+<button onclick="skip()">تخطي</button>
+<div id="fb"></div>
+<div>النقاط: <span id="sc">0</span> | المتبقي: <span id="rem">15</span></div>
+</div>
+
+<div id="end">
+<h2>🎉 مبروك يا <span id="pname"></span>!</h2>
+<p>نقاطك: <span id="fs">0</span></p>
+<button onclick="location.reload()">إعادة البدء</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/mohamed-ali-edu/chem-challenge@main/game.min.js"></script>
+</body>
+</html>
